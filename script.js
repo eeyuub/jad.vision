@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Language switching functionality
     const langButtons = document.querySelectorAll('.lang-btn');
-    const elementsWithLang = document.querySelectorAll('[data-fr][data-en]');
+    const elementsWithLang = document.querySelectorAll('[data-fr][data-en][data-ar]');
     let currentLang = 'fr'; // Default language
 
     // Function to switch language
@@ -29,11 +29,23 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Update page title and meta description
         if (lang === 'fr') {
-            document.title = 'Jad Vision - Opticien Professionnel à Agadir';
-            document.querySelector('meta[name="description"]').setAttribute('content', 'Jad Vision - Votre opticien de confiance à Agadir. Lunettes, lentilles de contact et soins oculaires professionnels. Horaires, localisation et contact.');
+            document.title = 'Jad Vision - Opticien à Agadir | Lunettes, Lentilles & Examens de Vue';
+            document.querySelector('meta[name="description"]').setAttribute('content', 'Jad Vision, votre opticien de confiance à Agadir. Découvrez notre large sélection de lunettes, lentilles de contact et bénéficiez d\'examens de vue professionnels.');
+        } else if (lang === 'en') {
+            document.title = 'Jad Vision - Optician in Agadir | Glasses, Contacts & Eye Exams';
+            document.querySelector('meta[name="description"]').setAttribute('content', 'Jad Vision, your trusted optician in Agadir. Discover our wide selection of glasses, contact lenses and benefit from professional eye exams.');
+        } else if (lang === 'ar') {
+            document.title = 'جاد فيجن - أخصائي البصريات في أكادير | نظارات، عدسات وفحوصات العين';
+            document.querySelector('meta[name="description"]').setAttribute('content', 'جاد فيجن، أخصائي البصريات الموثوق به في أكادير. اكتشف مجموعتنا الواسعة من النظارات والعدسات اللاصقة واستفد من فحوصات العين المهنية.');
+        }
+        
+        // Update document direction for RTL languages
+        if (lang === 'ar') {
+            document.documentElement.dir = 'rtl';
+            document.body.classList.add('rtl');
         } else {
-            document.title = 'Jad Vision - Professional Optician in Agadir';
-            document.querySelector('meta[name="description"]').setAttribute('content', 'Jad Vision - Your trusted optician in Agadir. Glasses, contact lenses and professional eye care services. Hours, location and contact information.');
+            document.documentElement.dir = 'ltr';
+            document.body.classList.remove('rtl');
         }
     }
 
@@ -80,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // --- Enhanced success feedback ---
                 const originalContent = copyButton.innerHTML;
                 const originalBackground = copyButton.style.background;
-                const successText = currentLang === 'fr' ? 'Copié!' : 'Copied!';
+                const successText = currentLang === 'fr' ? 'Copié!' : currentLang === 'en' ? 'Copied!' : 'تم النسخ!';
                 
                 // Update button appearance
                 copyButton.innerHTML = `<i class="fa-solid fa-check"></i> ${successText}`;
@@ -144,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // --- Enhanced error feedback ---
                 const originalContent = copyButton.innerHTML;
-                const errorText = currentLang === 'fr' ? 'Erreur!' : 'Error!';
+                const errorText = currentLang === 'fr' ? 'Erreur!' : currentLang === 'en' ? 'Error!' : 'خطأ!';
                 
                 copyButton.innerHTML = `<i class="fa-solid fa-exclamation-triangle"></i> ${errorText}`;
                 copyButton.style.background = 'linear-gradient(135deg, #d32f2f, #f44336)';
@@ -169,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 
                 setTimeout(() => {
-                    const copyText = currentLang === 'fr' ? 'Copier' : 'Copy';
+                    const copyText = currentLang === 'fr' ? 'Copier' : currentLang === 'en' ? 'Copy' : 'نسخ';
                     copyButton.innerHTML = originalContent;
                     copyButton.style.background = '';
                     copyButton.style.boxShadow = '';

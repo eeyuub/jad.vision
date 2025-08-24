@@ -40,7 +40,7 @@
     <link rel="dns-prefetch" href="https://facebook.com">
     <link rel="dns-prefetch" href="https://www.instagram.com">
     
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Noto+Sans+Arabic:wght@300;400;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
@@ -160,12 +160,16 @@
         <!-- Language Selector -->
         <div class="language-selector">
             <button id="lang-fr" class="lang-btn active" data-lang="fr">
-                <i class="fa-solid fa-globe"></i>
+                <i class="fa-solid fa-heart"></i>
                 Français
             </button>
             <button id="lang-en" class="lang-btn" data-lang="en">
-                <i class="fa-solid fa-globe"></i>
+                <i class="fa-solid fa-star"></i>
                 English
+            </button>
+            <button id="lang-ar" class="lang-btn" data-lang="ar">
+                <i class="fa-solid fa-moon"></i>
+                العربية
             </button>
         </div>
 
@@ -199,7 +203,7 @@
                 
                 <div class="tagline-container">
                     <div class="tagline-wrapper">
-                        <p class="tagline-text" data-fr="Votre Vision, Notre Passion" data-en="Your Vision, Our Passion">Votre Vision, Notre Passion</p>
+                        <p class="tagline-text" data-fr="Votre Vision, Notre Passion" data-en="Your Vision, Our Passion" data-ar="رؤيتكم، شغفنا">Votre Vision, Notre Passion</p>
                         <div class="tagline-accent" aria-hidden="true"></div>
                     </div>
                 </div>
@@ -215,74 +219,74 @@
 
 
         <section class="links-section" aria-labelledby="quick-links-heading">
-            <h2 id="quick-links-heading" class="sr-only" data-fr="Liens Rapides" data-en="Quick Links">Liens Rapides</h2>
-            <a href="https://www.google.com/maps/dir//N%C2%B0+5+Rue+Omar+El+Khyam,+Agadir+80000/@30.4135622,-9.6600442,23112m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0xdb3b72a9e39260d:0x479a412e6d697d5c!2m2!1d-9.5776429!2d30.4135881?hl=en-MA&entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D" class="link-button location" target="_blank" rel="noopener noreferrer" aria-label="Obtenir des directions vers notre magasin">
-                <i class="fa-solid fa-location-dot icon" aria-hidden="true"></i> 
-                <span data-fr="Trouvez Notre Magasin" data-en="Find Our Store">Trouvez Notre Magasin</span>
-            </a>
+            <h2 id="quick-links-heading" class="sr-only" data-fr="Liens Rapides" data-en="Quick Links" data-ar="روابط سريعة">Liens Rapides</h2>
             <a href="https://search.google.com/local/writereview?placeid=ChIJDSY5niq3sw0RXH1pbS5Bmkc" class="link-button review" target="_blank" rel="noopener noreferrer" aria-label="Laisser un avis Google pour Jad Vision">
                 <i class="fa-brands fa-google icon" aria-hidden="true"></i> 
-                <span data-fr="Laissez un Avis Google" data-en="Leave a Google Review">Laissez un Avis Google</span>
+                <span data-fr="Laissez un Avis Google" data-en="Leave a Google Review" data-ar="اترك تقييماً على جوجل">Laissez un Avis Google</span>
+            </a>
+            <a href="https://www.google.com/maps/dir//N%C2%B0+5+Rue+Omar+El+Khyam,+Agadir+80000/@30.4135622,-9.6600442,23112m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0xdb3b72a9e39260d:0x479a412e6d697d5c!2m2!1d-9.5776429!2d30.4135881?hl=en-MA&entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D" class="link-button location" target="_blank" rel="noopener noreferrer" aria-label="Obtenir des directions vers notre magasin">
+                <i class="fa-solid fa-location-dot icon" aria-hidden="true"></i> 
+                <span data-fr="Trouvez Notre Magasin" data-en="Find Our Store" data-ar="اعثر على متجرنا">Trouvez Notre Magasin</span>
             </a>
         </section>
 
         <section class="wifi-section" aria-labelledby="wifi-heading">
             <div class="wifi-header">
                 <i class="fa-solid fa-wifi icon" aria-hidden="true"></i>
-                <h2 id="wifi-heading" data-fr="Wi-Fi du Magasin" data-en="In-Store Wi-Fi">Wi-Fi du Magasin</h2>
+                <h2 id="wifi-heading" data-fr="Wi-Fi du Magasin" data-en="In-Store Wi-Fi" data-ar="واي فاي المتجر">Wi-Fi du Magasin</h2>
             </div>
             <p class="wifi-network">
-                <span data-fr="Réseau" data-en="Network">Réseau</span>: <strong>JadVision_Guest</strong>
+                <span data-fr="Réseau" data-en="Network" data-ar="الشبكة">Réseau</span>: <strong>JadVision_Guest</strong>
             </p>
             <div class="wifi-password">
                 <span>
-                    <span data-fr="Mot de passe" data-en="Password">Mot de passe</span>: <strong id="wifi-code">jadvision2025</strong>
+                    <span data-fr="Mot de passe" data-en="Password" data-ar="كلمة المرور">Mot de passe</span>: <strong id="wifi-code">jadvision2025</strong>
                 </span>
                 <button id="copy-btn" aria-label="Copier le mot de passe WiFi" type="button">
                     <i class="fa-regular fa-copy" aria-hidden="true"></i> 
-                    <span data-fr="Copier" data-en="Copy">Copier</span>
+                    <span data-fr="Copier" data-en="Copy" data-ar="نسخ">Copier</span>
                 </button>
             </div>
         </section>
 
         <!-- Business Information Sections -->
         <section class="business-info" aria-labelledby="business-info-heading">
-            <h2 id="business-info-heading" class="sr-only" data-fr="Informations sur l'Entreprise" data-en="Business Information">Informations sur l'Entreprise</h2>
+            <h2 id="business-info-heading" class="sr-only" data-fr="Informations sur l'Entreprise" data-en="Business Information" data-ar="معلومات الشركة">Informations sur l'Entreprise</h2>
             <div class="info-grid">
                 <!-- Business Hours Section -->
                 <article class="info-card hours-card" aria-labelledby="hours-heading">
                     <div class="info-header">
                         <i class="fa-solid fa-clock icon" aria-hidden="true"></i>
-                        <h3 id="hours-heading" data-fr="Horaires d'Ouverture" data-en="Opening Hours">Horaires d'Ouverture</h3>
+                        <h3 id="hours-heading" data-fr="Horaires d'Ouverture" data-en="Opening Hours" data-ar="ساعات العمل">Horaires d'Ouverture</h3>
                     </div>
                     <div class="hours-list">
                         <div class="hour-item">
-                            <span class="day" data-fr="Dimanche" data-en="Sunday">Dimanche</span>
-                            <span class="time" data-fr="14h00 - 21h00" data-en="2:00 PM - 9:00 PM">14h00 - 21h00</span>
+                            <span class="day" data-fr="Dimanche" data-en="Sunday" data-ar="الأحد">Dimanche</span>
+                            <span class="time" data-fr="14h00 - 21h00" data-en="2:00 PM - 9:00 PM" data-ar="14:00 - 21:00">14h00 - 21h00</span>
                         </div>
                         <div class="hour-item">
-                            <span class="day" data-fr="Lundi" data-en="Monday">Lundi</span>
-                            <span class="time" data-fr="10h00 - 21h00" data-en="10:00 AM - 9:00 PM">10h00 - 21h00</span>
+                            <span class="day" data-fr="Lundi" data-en="Monday" data-ar="الاثنين">Lundi</span>
+                            <span class="time" data-fr="10h00 - 21h00" data-en="10:00 AM - 9:00 PM" data-ar="10:00 - 21:00">10h00 - 21h00</span>
                         </div>
                         <div class="hour-item">
-                            <span class="day" data-fr="Mardi" data-en="Tuesday">Mardi</span>
-                            <span class="time" data-fr="10h00 - 21h00" data-en="10:00 AM - 9:00 PM">10h00 - 21h00</span>
+                            <span class="day" data-fr="Mardi" data-en="Tuesday" data-ar="الثلاثاء">Mardi</span>
+                            <span class="time" data-fr="10h00 - 21h00" data-en="10:00 AM - 9:00 PM" data-ar="10:00 - 21:00">10h00 - 21h00</span>
                         </div>
                         <div class="hour-item">
-                            <span class="day" data-fr="Mercredi" data-en="Wednesday">Mercredi</span>
-                            <span class="time" data-fr="10h00 - 21h00" data-en="10:00 AM - 9:00 PM">10h00 - 21h00</span>
+                            <span class="day" data-fr="Mercredi" data-en="Wednesday" data-ar="الأربعاء">Mercredi</span>
+                            <span class="time" data-fr="10h00 - 21h00" data-en="10:00 AM - 9:00 PM" data-ar="10:00 - 21:00">10h00 - 21h00</span>
                         </div>
                         <div class="hour-item">
-                            <span class="day" data-fr="Jeudi" data-en="Thursday">Jeudi</span>
-                            <span class="time" data-fr="10h00 - 21h00" data-en="10:00 AM - 9:00 PM">10h00 - 21h00</span>
+                            <span class="day" data-fr="Jeudi" data-en="Thursday" data-ar="الخميس">Jeudi</span>
+                            <span class="time" data-fr="10h00 - 21h00" data-en="10:00 AM - 9:00 PM" data-ar="10:00 - 21:00">10h00 - 21h00</span>
                         </div>
                         <div class="hour-item">
-                            <span class="day" data-fr="Vendredi" data-en="Friday">Vendredi</span>
-                            <span class="time" data-fr="10h00 - 21h00" data-en="10:00 AM - 9:00 PM">10h00 - 21h00</span>
+                            <span class="day" data-fr="Vendredi" data-en="Friday" data-ar="الجمعة">Vendredi</span>
+                            <span class="time" data-fr="10h00 - 21h00" data-en="10:00 AM - 9:00 PM" data-ar="10:00 - 21:00">10h00 - 21h00</span>
                         </div>
                         <div class="hour-item">
-                            <span class="day" data-fr="Samedi" data-en="Saturday">Samedi</span>
-                            <span class="time" data-fr="10h00 - 20h00" data-en="10:00 AM - 8:00 PM">10h00 - 20h00</span>
+                            <span class="day" data-fr="Samedi" data-en="Saturday" data-ar="السبت">Samedi</span>
+                            <span class="time" data-fr="10h00 - 20h00" data-en="10:00 AM - 8:00 PM" data-ar="10:00 - 20:00">10h00 - 20h00</span>
                         </div>
                     </div>
                 </div>
@@ -291,7 +295,7 @@
                 <article class="info-card contact-card" aria-labelledby="contact-heading">
                     <div class="info-header">
                         <i class="fa-solid fa-phone icon" aria-hidden="true"></i>
-                        <h3 id="contact-heading" data-fr="Nous Contacter" data-en="Contact Us">Nous Contacter</h3>
+                        <h3 id="contact-heading" data-fr="Nous Contacter" data-en="Contact Us" data-ar="اتصل بنا">Nous Contacter</h3>
                     </div>
                     <div class="contact-list">
                         <a href="tel:+212528236041" class="contact-item" aria-label="Appeler le 05 28 23 60 41">
@@ -313,10 +317,10 @@
                 <article class="info-card review-card" aria-labelledby="review-heading">
                     <div class="info-header">
                         <i class="fa-brands fa-google icon" aria-hidden="true"></i>
-                        <h3 id="review-heading" data-fr="Avis Google" data-en="Google Review">Avis Google</h3>
+                        <h3 id="review-heading" data-fr="Avis Google" data-en="Google Review" data-ar="تقييم جوجل">Avis Google</h3>
                     </div>
                     <a href="https://search.google.com/local/writereview?placeid=ChIJDSY5niq3sw0RXH1pbS5Bmkc" target="_blank" rel="noopener noreferrer" class="link-button review" aria-label="Laisser un avis Google pour Jad Vision">
-                        <span data-fr="Laissez un Avis Google" data-en="Leave a Google Review">Laissez un Avis Google</span>
+                        <span data-fr="Laissez un Avis Google" data-en="Leave a Google Review" data-ar="اترك تقييماً على جوجل">Laissez un Avis Google</span>
                         <i class="fa-solid fa-external-link" aria-hidden="true"></i>
                     </a>
                 </article>
@@ -325,10 +329,10 @@
                 <article class="info-card store-card" aria-labelledby="store-heading">
                     <div class="info-header">
                         <i class="fa-solid fa-location-dot icon" aria-hidden="true"></i>
-                        <h3 id="store-heading" data-fr="Trouvez Notre Magasin" data-en="Find Our Store">Trouvez Notre Magasin</h3>
+                        <h3 id="store-heading" data-fr="Trouvez Notre Magasin" data-en="Find Our Store" data-ar="اعثر على متجرنا">Trouvez Notre Magasin</h3>
                     </div>
                     <a href="https://www.google.com/maps/dir//N%C2%B0+5+Rue+Omar+El+Khyam,+Agadir+80000/@30.4135622,-9.6600442,23112m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1s0xdb3b72a9e39260d:0x479a412e6d697d5c!2m2!1d-9.5776429!2d30.4135881?hl=en-MA&entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D" class="link-button location" target="_blank" rel="noopener noreferrer" aria-label="Obtenir des directions vers notre magasin">
-                        <span data-fr="Trouvez Notre Magasin" data-en="Find Our Store">Trouvez Notre Magasin</span>
+                        <span data-fr="Trouvez Notre Magasin" data-en="Find Our Store" data-ar="اعثر على متجرنا">Trouvez Notre Magasin</span>
                         <i class="fa-solid fa-external-link" aria-hidden="true"></i>
                     </a>
                 </article>
@@ -345,7 +349,7 @@
                 </div>
                 
                 <div class="social-title">
-                    <h2 id="social-heading" class="title-text" data-fr="Suivez-nous" data-en="Follow Us">Suivez-nous</h2>
+                    <h2 id="social-heading" class="title-text" data-fr="Suivez-nous" data-en="Follow Us" data-ar="تابعونا">Suivez-nous</h2>
                     <div class="title-line" aria-hidden="true"></div>
                 </div>
                 
@@ -357,7 +361,7 @@
                         </div>
                         <div class="link-content">
                             <i class="fa-brands fa-instagram link-icon" aria-hidden="true"></i>
-                            <span class="link-text" data-fr="Instagram" data-en="Instagram">Instagram</span>
+                            <span class="link-text" data-fr="Instagram" data-en="Instagram" data-ar="إنستغرام">Instagram</span>
                             <div class="link-arrow">
                                 <i class="fa-solid fa-arrow-up-right" aria-hidden="true"></i>
                             </div>
@@ -372,7 +376,7 @@
                         </div>
                         <div class="link-content">
                             <i class="fa-brands fa-facebook-f link-icon" aria-hidden="true"></i>
-                            <span class="link-text" data-fr="Facebook" data-en="Facebook">Facebook</span>
+                            <span class="link-text" data-fr="Facebook" data-en="Facebook" data-ar="فيسبوك">Facebook</span>
                             <div class="link-arrow">
                                 <i class="fa-solid fa-arrow-up-right" aria-hidden="true"></i>
                             </div>
@@ -389,6 +393,38 @@
             </div>
         </div>
 
+        <!-- Customer Appreciation Section -->
+        <div class="appreciation-section">
+            <div class="appreciation-container">
+                <div class="appreciation-background" aria-hidden="true">
+                    <div class="appreciation-wave wave-1"></div>
+                    <div class="appreciation-wave wave-2"></div>
+                    <div class="appreciation-wave wave-3"></div>
+                </div>
+                
+                <div class="appreciation-title">
+                    <h2 id="appreciation-heading" class="title-text appreciation-heading" data-fr="Merci de votre visite !" data-en="Thank you for visiting our store!" data-ar="شكراً لزيارتكم متجرنا!">Merci de votre visite !</h2>
+                    <div class="title-line" aria-hidden="true"></div>
+                </div>
+                
+                <div class="appreciation-content">
+                    <p class="appreciation-message" data-fr="Votre confiance nous honore et nous motive à vous offrir le meilleur service possible." data-en="Your trust honors us and motivates us to provide you with the best possible service." data-ar="ثقتكم تشرفنا وتحفزنا لتقديم أفضل خدمة ممكنة لكم.">Votre confiance nous honore et nous motive à vous offrir le meilleur service possible.</p>
+                </div>
+                
+                <div class="appreciation-decoration">
+                    <div class="deco-heart heart-1">
+                        <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    </div>
+                    <div class="deco-heart heart-2">
+                        <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    </div>
+                    <div class="deco-heart heart-3">
+                        <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <!-- Review Popup -->
@@ -401,15 +437,15 @@
                 <div class="review-popup-icon">
                     <i class="fa-brands fa-google"></i>
                 </div>
-                <h3 class="review-popup-title" data-fr="Votre avis compte !" data-en="Your opinion matters!">Votre avis compte !</h3>
-                <p class="review-popup-message" data-fr="Nous espérons que vous avez eu une excellente expérience chez Jad Vision. Pourriez-vous prendre un moment pour partager votre avis sur Google ?" data-en="We hope you had an excellent experience at Jad Vision. Could you take a moment to share your review on Google?">Nous espérons que vous avez eu une excellente expérience chez Jad Vision. Pourriez-vous prendre un moment pour partager votre avis sur Google ?</p>
+                <h3 class="review-popup-title" data-fr="Votre avis compte !" data-en="Your opinion matters!" data-ar="رأيكم مهم!">Votre avis compte !</h3>
+                <p class="review-popup-message" data-fr="Nous espérons que vous avez eu une excellente expérience chez Jad Vision. Pourriez-vous prendre un moment pour partager votre avis sur Google ?" data-en="We hope you had an excellent experience at Jad Vision. Could you take a moment to share your review on Google?" data-ar="نأمل أن تكونوا قد حصلتم على تجربة ممتازة في جاد فيجن. هل يمكنكم أن تأخذوا لحظة لمشاركة تقييمكم على جوجل؟">Nous espérons que vous avez eu une excellente expérience chez Jad Vision. Pourriez-vous prendre un moment pour partager votre avis sur Google ?</p>
                 <div class="review-popup-buttons">
                     <a href="https://search.google.com/local/writereview?placeid=ChIJDSY5niq3sw0RXH1pbS5Bmkc" target="_blank" rel="noopener noreferrer" class="review-popup-btn review-btn" id="reviewBtn">
                         <i class="fa-brands fa-google"></i>
-                        <span data-fr="Laisser un avis" data-en="Leave a review">Laisser un avis</span>
+                        <span data-fr="Laisser un avis" data-en="Leave a review" data-ar="اترك تقييماً">Laisser un avis</span>
                     </a>
                     <button class="review-popup-btn later-btn" id="laterBtn">
-                        <span data-fr="Plus tard" data-en="Maybe later">Plus tard</span>
+                        <span data-fr="Plus tard" data-en="Maybe later" data-ar="ربما لاحقاً">Plus tard</span>
                     </button>
                 </div>
             </div>
