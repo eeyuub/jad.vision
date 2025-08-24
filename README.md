@@ -139,7 +139,7 @@ This project is proprietary software for Jad Vision optician store.
 - 📞 +212 528 310 163
 - 📱 +212 665 650 577
 - 📧 [Instagram](https://www.instagram.com/jad.vision/)
-- 📘 [Facebook](https://facebook.com/jadvision)
+- 📘 [Facebook](https://www.facebook.com/share/1Ceg8nEXwy/)
 
 ---
 
