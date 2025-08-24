@@ -157,21 +157,6 @@
     <div class="background-blob blob2"></div>
 
     <main class="container">
-        <!-- Language Selector -->
-        <div class="language-selector">
-            <button id="lang-fr" class="lang-btn active" data-lang="fr">
-                <i class="fa-solid fa-heart"></i>
-                Français
-            </button>
-            <button id="lang-en" class="lang-btn" data-lang="en">
-                <i class="fa-solid fa-star"></i>
-                English
-            </button>
-            <button id="lang-ar" class="lang-btn" data-lang="ar">
-                <i class="fa-solid fa-moon"></i>
-                العربية
-            </button>
-        </div>
 
         <header class="profile-header" role="banner">
             <div class="header-background" aria-hidden="true">
@@ -453,6 +438,28 @@
     </div>
 
 </main>
+
+    <!-- Floating Language Selector -->
+    <div id="floating-lang-selector" class="floating-lang-selector">
+        <button id="lang-toggle-btn" class="lang-toggle-btn">
+            <i class="fa-solid fa-globe"></i>
+            <span class="current-lang">FR</span>
+        </button>
+        <div id="lang-dropdown" class="lang-dropdown">
+            <button class="lang-option" data-lang="fr">
+                <i class="fa-solid fa-heart"></i>
+                <span>Français</span>
+            </button>
+            <button class="lang-option" data-lang="en">
+                <i class="fa-solid fa-star"></i>
+                <span>English</span>
+            </button>
+            <button class="lang-option" data-lang="ar">
+                <i class="fa-solid fa-moon"></i>
+                <span>العربية</span>
+            </button>
+        </div>
+    </div>
 
     <!-- Go to Top Button -->
     <button id="go-to-top" class="go-to-top-btn" aria-label="Retour en haut de la page" title="Retour en haut">

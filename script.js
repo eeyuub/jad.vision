@@ -1,20 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Language switching functionality
-    const langButtons = document.querySelectorAll('.lang-btn');
+    const langToggleBtn = document.getElementById('lang-toggle-btn');
+    const langDropdown = document.getElementById('lang-dropdown');
+    const langOptions = document.querySelectorAll('.lang-option');
+    const currentLangSpan = document.querySelector('.current-lang');
     const elementsWithLang = document.querySelectorAll('[data-fr][data-en][data-ar]');
     let currentLang = 'fr'; // Default language
+    let isDropdownOpen = false;
+
+    // Function to toggle dropdown
+    function toggleDropdown() {
+        isDropdownOpen = !isDropdownOpen;
+        if (isDropdownOpen) {
+            langDropdown.classList.add('show');
+        } else {
+            langDropdown.classList.remove('show');
+        }
+    }
+
+    // Function to close dropdown
+    function closeDropdown() {
+        isDropdownOpen = false;
+        langDropdown.classList.remove('show');
+    }
 
     // Function to switch language
     function switchLanguage(lang) {
         currentLang = lang;
         
-        // Update active button
-        langButtons.forEach(btn => {
-            btn.classList.remove('active');
-            if (btn.dataset.lang === lang) {
-                btn.classList.add('active');
-            }
-        });
+        // Update current language display
+        const langMap = {
+            'fr': 'FR',
+            'en': 'EN',
+            'ar': 'ع'
+        };
+        currentLangSpan.textContent = langMap[lang];
 
         // Update text content
         elementsWithLang.forEach(element => {
@@ -49,12 +69,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Add event listeners to language buttons
-    langButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const lang = button.dataset.lang;
-            switchLanguage(lang);
+    // Add event listeners for floating language selector
+    langToggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleDropdown();
+    });
+
+    // Add event listeners to language options
+    langOptions.forEach(option => {
+        option.addEventListener('click', (e) => {
+            e.stopPropagation();
+            switchLanguage(option.dataset.lang);
+            closeDropdown();
         });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!langToggleBtn.contains(e.target) && !langDropdown.contains(e.target)) {
+            closeDropdown();
+        }
+    });
+
+    // Close dropdown with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isDropdownOpen) {
+            closeDropdown();
+        }
     });
 
     // Initialize with default language (French)

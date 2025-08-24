@@ -2199,55 +2199,161 @@ body {
     text-align: center;
 }
 
-/* Mobile Responsiveness for Language Selector */
+/* Floating Language Selector */
+.floating-lang-selector {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 1001;
+}
+
+.lang-toggle-btn {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lang-toggle-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+}
+
+.lang-toggle-btn i {
+    font-size: 1.2rem;
+}
+
+.current-lang {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.lang-dropdown {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    padding: 10px;
+    min-width: 160px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px) scale(0.95);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.lang-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.lang-option {
+    width: 100%;
+    padding: 12px 16px;
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.2s ease;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.lang-option:last-child {
+    margin-bottom: 0;
+}
+
+.lang-option:hover {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    transform: translateX(5px);
+}
+
+.lang-option i {
+    font-size: 1rem;
+    width: 16px;
+    text-align: center;
+}
+
+/* Mobile Responsiveness for Floating Language Selector */
 @media (max-width: 768px) {
-    .language-selector {
-        flex-direction: column;
-        gap: 12px;
-        margin-bottom: 25px;
-        padding: 0 10px;
+    .floating-lang-selector {
+        bottom: 1.5rem;
+        left: 1.5rem;
     }
     
-    .lang-btn {
-        width: 100%;
-        padding: 16px 24px;
-        font-size: 1rem;
-        border-radius: 20px;
-        justify-content: center;
-        min-height: 48px;
-        gap: 12px;
+    .lang-toggle-btn {
+        width: 55px;
+        height: 55px;
     }
     
-    .lang-btn i {
-        font-size: 1.2rem;
+    .lang-toggle-btn i {
+        font-size: 1.1rem;
     }
     
-    .lang-btn:hover {
-        transform: translateY(-2px) scale(1.02);
+    .current-lang {
+        font-size: 0.65rem;
     }
     
-    .lang-btn.active:hover {
-        transform: translateY(-2px) scale(1.02);
+    .lang-dropdown {
+        bottom: 65px;
+        min-width: 150px;
     }
 }
 
 @media (max-width: 480px) {
-    .language-selector {
-        gap: 10px;
-        margin-bottom: 20px;
-        padding: 0 5px;
+    .floating-lang-selector {
+        bottom: 1rem;
+        left: 1rem;
     }
     
-    .lang-btn {
-        padding: 14px 20px;
-        font-size: 0.95rem;
-        border-radius: 18px;
-        min-height: 44px;
-        gap: 10px;
+    .lang-toggle-btn {
+        width: 50px;
+        height: 50px;
     }
     
-    .lang-btn i {
-        font-size: 1.1rem;
+    .lang-toggle-btn i {
+        font-size: 1rem;
+    }
+    
+    .current-lang {
+        font-size: 0.6rem;
+    }
+    
+    .lang-dropdown {
+        bottom: 60px;
+        min-width: 140px;
+        padding: 8px;
+    }
+    
+    .lang-option {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+        gap: 10px;
     }
 }
 
