@@ -1220,7 +1220,7 @@ body {
 .info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    gap: 25px;
     margin-bottom: 25px;
 }
 
@@ -1228,6 +1228,7 @@ body {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 16px;
     padding: 20px;
+    margin: 15px 0;
     border: 1px solid rgba(184, 134, 11, 0.2);
     box-shadow: 0 4px 15px rgba(184, 134, 11, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1355,8 +1356,9 @@ body {
     box-shadow: 0 4px 15px rgba(139, 90, 0, 0.3);
 }
 
-/* Store Card Styling */
-.store-card .link-button {
+/* Store Card and Review Card Styling */
+.store-card .link-button,
+.review-card .link-button {
     width: 100%;
     justify-content: space-between;
     padding: 16px 20px;
@@ -1366,11 +1368,20 @@ body {
     border: 2px solid var(--secondary-color);
     border-radius: 12px;
     transition: all 0.3s ease;
+    color: var(--primary-color);
+    text-shadow: none;
+    background-image: none;
 }
 
-.store-card .link-button:hover {
+.store-card .link-button:hover,
+.review-card .link-button:hover {
     background-color: rgba(184, 134, 11, 0.2);
     transform: translateY(-2px);
+}
+
+.store-card .link-button::before,
+.review-card .link-button::before {
+    display: none;
 }
 
 /* --- Social Footer --- */
