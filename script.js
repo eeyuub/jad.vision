@@ -322,4 +322,26 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     };
+
+    // Go to Top Button Functionality
+    const goToTopBtn = document.getElementById('go-to-top');
+    
+    if (goToTopBtn) {
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                goToTopBtn.classList.add('visible');
+            } else {
+                goToTopBtn.classList.remove('visible');
+            }
+        });
+        
+        // Smooth scroll to top when button is clicked
+        goToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
